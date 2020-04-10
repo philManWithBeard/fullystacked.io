@@ -1,0 +1,232 @@
+@media all and (max-width: 600px) {
+  body {
+    box-sizing: border-box;
+    margin: 0px;
+  }
+
+  header {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 400px;
+    padding: 30px 40px;
+    height: 15vh;
+    background-color: #ffd166;
+  }
+
+  .logoTitle {
+    display: flex;
+    align-items: center;
+  }
+
+  header img {
+    height: 40px;
+    width: 40px;
+  }
+
+  header h1 {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 20px;
+    color: #06d6a0;
+    padding-left: 10px;
+  }
+
+  section.about {
+    box-sizing: border-box;
+    background-color: #ef476f;
+    width: 100%;
+    padding: 0px 40px;
+    height: 40vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  section.about h2 {
+    padding: 20px 0px 40px 0px;
+    margin: 0px;
+    color: #118ab2;
+    font-family: 'Varela Round', sans-serif;
+  }
+
+  section.about img {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  section.skills {
+    box-sizing: border-box;
+    background-color: #118ab2;
+    width: 100%;
+    padding: 40px 40px 80px 40px;
+
+  }
+
+  section.skills h2 {
+    margin: 0px;
+    color: #ef476f;
+    font-family: 'Varela Round', sans-serif;
+  }
+
+  section.skills ul {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img#burger1 {
+    position: relative;
+    top: 0;
+    z-index: 6;
+  }
+
+  img#burger2 {
+    position: relative;
+    top: -50px;
+    z-index: 5;
+  }
+
+  img#burger3 {
+    position: relative;
+    top: -120px;
+    z-index: 4;
+  }
+
+  img#burger4 {
+    position: relative;
+    top: -170px;
+    z-index: 3;
+  }
+
+  img#burger5 {
+    position: relative;
+    top: -240px;
+    z-index: 2;
+  }
+
+  img#burger6 {
+    position: relative;
+    top: -300px;
+    z-index: 1;
+  }
+
+  section.contact {
+    box-sizing: border-box;
+    background-color: #06d6a0;
+    width: 100%;
+    padding: 40px 40px;
+  }
+
+  section.contact h2 {
+    margin: 0px;
+    color: #ffd166;
+    font-family: 'Varela Round', sans-serif;
+  }
+
+  /*!
+   * Hamburgers
+   * @description Tasty CSS-animated hamburgers
+   * @author Jonathan Suh @jonsuh
+   * @site https://jonsuh.com/hamburgers
+   * @link https://github.com/jonsuh/hamburgers
+   */
+  .hamburger {
+    padding: 0px;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+  }
+
+  .hamburger:hover {
+    opacity: 0.7;
+  }
+
+  .hamburger.is-active:hover {
+    opacity: 0.7;
+  }
+
+  .hamburger.is-active .hamburger-inner,
+  .hamburger.is-active .hamburger-inner::before,
+  .hamburger.is-active .hamburger-inner::after {
+    background-color: #06d6a0
+  }
+
+  .hamburger-box {
+    width: 40px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+  }
+
+  .hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+  }
+
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #06d6a0;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+  }
+
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block;
+  }
+
+  .hamburger-inner::before {
+    top: -10px;
+  }
+
+  .hamburger-inner::after {
+    bottom: -10px;
+  }
+
+  .hamburger--slider .hamburger-inner {
+    top: 2px;
+  }
+
+  .hamburger--slider .hamburger-inner::before {
+    top: 10px;
+    transition-property: transform, opacity;
+    transition-timing-function: ease;
+    transition-duration: 0.15s;
+  }
+
+  .hamburger--slider .hamburger-inner::after {
+    top: 20px;
+  }
+
+  .hamburger--slider.is-active .hamburger-inner {
+    transform: translate3d(0, 10px, 0) rotate(45deg);
+  }
+
+  .hamburger--slider.is-active .hamburger-inner::before {
+    transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+    opacity: 0;
+  }
+
+  .hamburger--slider.is-active .hamburger-inner::after {
+    transform: translate3d(0, -20px, 0) rotate(-90deg);
+  }
+}
