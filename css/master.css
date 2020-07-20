@@ -1,10 +1,18 @@
-@media all and (max-width: 600px) {
+@media all and (min-width: 689px) and (max-width: 2000px) {
   body {
     box-sizing: border-box;
     margin: 0px;
+    width: 100%;
   }
 
   header {
+    width: 100%;
+    background-color: #e7e7e7;
+  }
+
+  .headerBox {
+    margin: auto;
+    width: 700px;
     display: flex;
     box-sizing: border-box;
     justify-content: space-between;
@@ -12,7 +20,6 @@
     min-width: 400px;
     padding: 30px 40px;
     height: 15vh;
-    background-color: #ffd166;
   }
 
   .logoTitle {
@@ -26,106 +33,183 @@
   }
 
   header h1 {
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Space Mono', monospace;
     font-size: 20px;
-    color: #06d6a0;
-    padding-left: 10px;
+    color: #222;
   }
 
-  section.about {
+  .about {
     box-sizing: border-box;
-    background-color: #ef476f;
+    background-color: #ffe8b3;
     width: 100%;
     padding: 0px 40px;
-    height: 40vh;
-    text-align: center;
+    text-align: left;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
     justify-content: center;
   }
 
-  section.about h2 {
-    padding: 20px 0px 40px 0px;
+  .about h2 {
+    padding: 120px 0px 120px 0px;
     margin: 0px;
-    color: #118ab2;
-    font-family: 'Varela Round', sans-serif;
+    color: #222;
+    font-size: 50px;
+    font-family: 'Goudy Bookletter 1911', serif;
   }
 
-  section.about img {
-    padding: 0px;
-    margin: 0px;
+  .about img {
+    margin-top: 170px;
   }
 
-  section.skills {
+  .skills {
     box-sizing: border-box;
-    background-color: #118ab2;
-    width: 100%;
-    padding: 40px 40px 80px 40px;
-
-  }
-
-  section.skills h2 {
-    margin: 0px;
-    color: #ef476f;
-    font-family: 'Varela Round', sans-serif;
-  }
-
-  section.skills ul {
-    padding: 0px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: flex-start;
+    background-color: #73a9ba;
+    width: 100%;
+    padding: 80px 40px 80px 40px;
   }
 
-  img#burger1 {
+  .skillsContent {
+    text-align: left;
+    width: 340px;
+    padding: 0px 0px 0px 40px;
+  }
+
+  .skills h2, .contact h2 {
+    display: block;
+    padding-bottom: 20px;
+    color: #222;
+    font-size: 40px;
+    font-family: 'Goudy Bookletter 1911', serif;
+  }
+
+  .skills h3, .projects h3 {
+    display: block;
+    color: #222;
+    font-size: 30px;
+    padding-bottom: 10px;
+    font-family: 'Goudy Bookletter 1911', serif;
+  }
+
+  .skills p, .skills ul, .projects p, .projects a {
+    font-size: 15px;
+    padding-bottom: 10px;
+    font-family: 'Mulish', sans-serif;
+    list-style-type: circle;
+    list-style-position: inside;
+    line-height: 1.4;
+  }
+
+  .techIcon {
+    color: #4b4b4b;
+    height: 1.3em;
+  }
+
+  .projectTech {
+    padding-bottom: 10px;
+  }
+
+  a.projectButton {
+    color: #494949 !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffffff;
+    display: inline-block;
+  }
+
+  a.projectButton:hover {
+    color: #06d6a0;
+  }
+
+  .burger {
+    width: 220px;
+  }
+
+  #burger1 {
     position: relative;
     top: 0;
-    z-index: 6;
+    z-index: 12;
   }
 
-  img#burger2 {
+  #burger2 {
     position: relative;
-    top: -50px;
-    z-index: 5;
+    top: -65px;
+    z-index: 11;
   }
 
-  img#burger3 {
+  #burger3 {
     position: relative;
-    top: -120px;
-    z-index: 4;
+    top: -150px;
+    z-index: 10;
   }
 
-  img#burger4 {
+  #burger4 {
     position: relative;
-    top: -170px;
-    z-index: 3;
+    top: -190px;
+    z-index: 9;
   }
 
   img#burger5 {
     position: relative;
-    top: -240px;
-    z-index: 2;
+    top: -260px;
+    z-index: 8;
   }
 
   img#burger6 {
     position: relative;
-    top: -300px;
-    z-index: 1;
+    top: -310px;
+    z-index: 7;
   }
 
-  section.contact {
+  .projects {
     box-sizing: border-box;
-    background-color: #06d6a0;
+    background-color: #fff;
     width: 100%;
+    padding: 40px 40px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projects h2 {
+    width: 600px;
+    display: block;
+    padding: 50px 0px;
+    color: #222;
+    font-size: 40px;
+    font-family: 'Goudy Bookletter 1911', serif;
+  }
+
+  .projects img {
+    width: 300px;
+    display: block;
+  }
+
+  .leftProject {
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .leftProjecText {
+    padding-right: 20px;
+  }
+
+  .contact {
+    box-sizing: border-box;
+    background-color: #90d6c3;
+    background-size: cover;
     padding: 40px 40px;
   }
 
-  section.contact h2 {
-    margin: 0px;
-    color: #ffd166;
-    font-family: 'Varela Round', sans-serif;
+  .contactBox {
+    width: 600px;
+    text-align: left;
+    margin: auto;
   }
 
   /*!
@@ -162,7 +246,7 @@
   .hamburger.is-active .hamburger-inner,
   .hamburger.is-active .hamburger-inner::before,
   .hamburger.is-active .hamburger-inner::after {
-    background-color: #06d6a0
+    background-color: #222
   }
 
   .hamburger-box {
@@ -181,7 +265,7 @@
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
     width: 40px;
     height: 4px;
-    background-color: #06d6a0;
+    background-color: #222;
     border-radius: 4px;
     position: absolute;
     transition-property: transform;
@@ -230,3 +314,496 @@
     transform: translate3d(0, -20px, 0) rotate(-90deg);
   }
 }
+
+@media all and (min-width: 412px) and (max-width: 688px) {
+  body {
+    box-sizing: border-box;
+    margin: 0px;
+  }
+
+  header {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 400px;
+    padding: 30px 40px;
+    height: 15vh;
+    background-color: #e7e7e7;
+  }
+
+  .logoTitle {
+    display: flex;
+    align-items: center;
+  }
+
+  header img {
+    height: 40px;
+    width: 40px;
+  }
+
+  header h1 {
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+    color: #222;
+  }
+
+  .about {
+    box-sizing: border-box;
+    background-color: #ffe8b3;
+    width: 100%;
+    padding: 0px 40px;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .about h2 {
+    padding: 80px 0px 80px 0px;
+    margin: 0px;
+    color: #222;
+    font-size: 40px;
+    font-family: 'Goudy Bookletter 1911', serif;
+  }
+
+  .about img {
+    margin-top: 130px;
+  }
+
+  .skills {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #73a9ba;
+    width: 100%;
+    padding: 40px 40px 80px 40px;
+  }
+
+  .skillsContent {
+    text-align: left;
+    padding: 0px 0px 0px 40px;
+  }
+
+  .skills h2, .projects h2, .contact h2 {
+    display: block;
+    padding-bottom: 20px;
+    color: #222;
+    font-size: 32px;
+    font-family: 'Goudy Bookletter 1911', serif;
+  }
+
+  .skills h3, .projects h3 {
+    display: block;
+    color: #222;
+    font-size: 25px;
+    padding-bottom: 10px;
+    font-family: 'Goudy Bookletter 1911', serif;
+  }
+
+  .skills p, .skills ul, .projects p, .projects a {
+    font-size: 15px;
+    padding-bottom: 10px;
+    font-family: 'Open-Sans', sans-serif;
+    list-style-type: circle;
+    list-style-position: inside;
+    line-height: 1.4;
+  }
+
+  .techIcon {
+    color: #4b4b4b;
+    height: 1.3em;
+  }
+
+  .projectTech {
+    padding-bottom: 10px;
+  }
+
+  a.projectButton {
+    color: #494949 !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffffff;
+    display: inline-block;
+  }
+
+  a.projectButton:hover {
+    color: #06d6a0;
+  }
+
+  #burger1 {
+    position: relative;
+    top: 0;
+    z-index: 12;
+  }
+
+  #burger2 {
+    position: relative;
+    top: -65px;
+    z-index: 11;
+  }
+
+  #burger3 {
+    position: relative;
+    top: -150px;
+    z-index: 10;
+  }
+
+  #burger4 {
+    position: relative;
+    top: -190px;
+    z-index: 9;
+  }
+
+  img#burger5 {
+    position: relative;
+    top: -260px;
+    z-index: 8;
+  }
+
+  img#burger6 {
+    position: relative;
+    top: -310px;
+    z-index: 7;
+  }
+
+  .projects {
+    box-sizing: border-box;
+    background-color: #fff;
+    width: 100%;
+    padding: 40px 40px;
+  }
+
+  .projects img {
+    width: 300px;
+    display: block;
+  }
+
+  .leftProject {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .leftProjecText {
+    padding-right: 20px;
+  }
+
+  .contact {
+    box-sizing: border-box;
+    background-color: #90d6c3;
+    width: 100%;
+    padding: 40px 40px;
+  }
+
+  /*!
+   * Hamburgers
+   * @description Tasty CSS-animated hamburgers
+   * @author Jonathan Suh @jonsuh
+   * @site https://jonsuh.com/hamburgers
+   * @link https://github.com/jonsuh/hamburgers
+   */
+  .hamburger {
+    padding: 0px;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+  }
+
+  .hamburger:hover {
+    opacity: 0.7;
+  }
+
+  .hamburger.is-active:hover {
+    opacity: 0.7;
+  }
+
+  .hamburger.is-active .hamburger-inner,
+  .hamburger.is-active .hamburger-inner::before,
+  .hamburger.is-active .hamburger-inner::after {
+    background-color: #222
+  }
+
+  .hamburger-box {
+    width: 40px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+  }
+
+  .hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+  }
+
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #222;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+  }
+
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block;
+  }
+
+  .hamburger-inner::before {
+    top: -10px;
+  }
+
+  .hamburger-inner::after {
+    bottom: -10px;
+  }
+
+  .hamburger--slider .hamburger-inner {
+    top: 2px;
+  }
+
+  .hamburger--slider .hamburger-inner::before {
+    top: 10px;
+    transition-property: transform, opacity;
+    transition-timing-function: ease;
+    transition-duration: 0.15s;
+  }
+
+  .hamburger--slider .hamburger-inner::after {
+    top: 20px;
+  }
+
+  .hamburger--slider.is-active .hamburger-inner {
+    transform: translate3d(0, 10px, 0) rotate(45deg);
+  }
+
+  .hamburger--slider.is-active .hamburger-inner::before {
+    transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+    opacity: 0;
+  }
+
+  .hamburger--slider.is-active .hamburger-inner::after {
+    transform: translate3d(0, -20px, 0) rotate(-90deg);
+  }
+}
+
+@media all and (max-width: 412px) {
+  body {
+    box-sizing: border-box;
+    margin: 0px;
+  }
+
+  header {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 300px;
+    padding: 30px 40px;
+    height: 15vh;
+    background-color: #e7e7e7;
+  }
+
+  .logoTitle {
+    display: flex;
+    align-items: center;
+  }
+
+  header img {
+    height: 40px;
+    width: 40px;
+  }
+
+  header h1 {
+    font-family: 'Space Mono', monospace;
+    font-size: 15px;
+    color: #222;
+  }
+
+  section.about {
+    box-sizing: border-box;
+    background-color: #ffe8b3;
+    width: 100%;
+    padding: 0px 40px;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  section.about h2 {
+    padding: 80px 0px 80px 0px;
+    margin: 0px;
+    color: #222;
+    font-size: 30px;
+    font-family: 'Goudy Bookletter 1911', serif;
+  }
+
+  section.about img {
+    margin-top: 130px;
+  }
+
+  section.skills {
+    box-sizing: border-box;
+    background-color: #73a9ba;
+    width: 100%;
+    padding: 40px 40px 80px 40px;
+  }
+
+  .skills h2, .projects h2, .contact h2 {
+    display: block;
+    padding-bottom: 20px;
+    color: #222;
+    font-size: 32px;
+    font-family: 'Goudy Bookletter 1911', serif;
+  }
+
+  .skills h3, .projects h3 {
+    display: block;
+    color: #222;
+    font-size: 25px;
+    padding-bottom: 10px;
+    font-family: 'Goudy Bookletter 1911', serif;
+  }
+
+  .skills p, .skills ul, .projects p, .projects a {
+    font-size: 20px;
+    padding-bottom: 10px;
+    font-family: 'Open-Sans', sans-serif;
+    list-style-type: circle;
+    list-style-position: inside;
+    line-height: 1.6;
+  }
+
+  .techIcon {
+    color: #4b4b4b;
+    height: 1.3em;
+  }
+
+  .projectTech {
+    padding-bottom: 10px;
+  }
+
+  a.projectButton {
+    color: #494949 !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffffff;
+    display: inline-block;
+  }
+
+  a.projectButton:hover {
+    color: #06d6a0;
+  }
+
+  .burger {
+    width: 200px;
+    height: 200px;
+  }
+
+  #burger1 {
+    width: 150px;
+    position: relative;
+    top: 0;
+    z-index: 12;
+  }
+
+  #burger2 {
+    width: 150px;
+    position: relative;
+    top: -40px;
+    z-index: 11;
+  }
+
+  #burger3 {
+    width: 150px;
+    position: relative;
+    top: -85px;
+    z-index: 10;
+  }
+
+  #burger4 {
+    width: 150px;
+    position: relative;
+    top: -115px;
+    z-index: 9;
+  }
+
+  #burger5 {
+    width: 150px;
+    position: relative;
+    top: -165px;
+    z-index: 8;
+  }
+
+  #burger6 {
+    width: 150px;
+    position: relative;
+    top: -205px;
+    z-index: 7;
+  }
+
+  .projects {
+    box-sizing: border-box;
+    background-color: #fff;
+    width: 100%;
+    padding: 40px 40px;
+  }
+
+  .projects img {
+    width: 200px;
+    display: block;
+  }
+
+  .leftProject {
+    display: block;
+  }
+
+  .leftProjectText {
+    padding-right: 20px;
+  }
+
+  .contact {
+    box-sizing: border-box;
+    background-color: #90d6c3;
+    width: 100%;
+    padding: 40px 40px;
+  }
+
+  /*!
+   * Hamburgers
+   * @description Tasty CSS-animated hamburgers
+   * @author Jonathan Suh @jonsuh
+   * @site https://jonsuh.com/hamburgers
+   * @link https://github.com/jonsuh/hamburgers
+   */
+  .hamburger {
+    padding: 0px;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+  }
