@@ -5,6 +5,90 @@
     width: 100%;
   }
 
+  nav input[type="checkbox"] {
+    opacity: 0;
+    display: none;
+  }
+
+  nav {
+    width: 100%;
+    top: 25px;
+    text-align: right;
+  }
+
+  nav a {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #16151b;
+    margin: 0 15px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+  }
+
+  nav a:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #16151b;
+    top: 47%;
+    animation: out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+  }
+
+  nav a:hover:before {
+    animation: in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+  }
+
+  @keyframes in {
+    0% {
+      width: 0;
+      left: 0;
+      right: auto;
+    }
+
+    100% {
+      left: 0;
+      right: auto;
+      width: 100%;
+    }
+  }
+
+  @keyframes out {
+    0% {
+      width: 100%;
+      left: auto;
+      right: 0;
+    }
+
+    100% {
+      width: 0;
+      left: auto;
+      right: 0;
+    }
+  }
+
+  @keyframes show {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @for $i from 1 through 5 {
+    nav a:nth-child(#{$i}) {
+      animation:show .2s #{$i*0.1+1}s ease 1 both;
+    }
+  }
+
   header {
     width: 100%;
     background-color: #e7e7e7;
@@ -211,108 +295,6 @@
     text-align: left;
     margin: auto;
   }
-
-  /*!
-   * Hamburgers
-   * @description Tasty CSS-animated hamburgers
-   * @author Jonathan Suh @jonsuh
-   * @site https://jonsuh.com/hamburgers
-   * @link https://github.com/jonsuh/hamburgers
-   */
-  .hamburger {
-    padding: 0px;
-    display: inline-block;
-    cursor: pointer;
-    transition-property: opacity, filter;
-    transition-duration: 0.15s;
-    transition-timing-function: linear;
-    font: inherit;
-    color: inherit;
-    text-transform: none;
-    background-color: transparent;
-    border: 0;
-    margin: 0;
-    overflow: visible;
-  }
-
-  .hamburger:hover {
-    opacity: 0.7;
-  }
-
-  .hamburger.is-active:hover {
-    opacity: 0.7;
-  }
-
-  .hamburger.is-active .hamburger-inner,
-  .hamburger.is-active .hamburger-inner::before,
-  .hamburger.is-active .hamburger-inner::after {
-    background-color: #222
-  }
-
-  .hamburger-box {
-    width: 40px;
-    height: 24px;
-    display: inline-block;
-    position: relative;
-  }
-
-  .hamburger-inner {
-    display: block;
-    top: 50%;
-    margin-top: -2px;
-  }
-
-  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-    width: 40px;
-    height: 4px;
-    background-color: #222;
-    border-radius: 4px;
-    position: absolute;
-    transition-property: transform;
-    transition-duration: 0.15s;
-    transition-timing-function: ease;
-  }
-
-  .hamburger-inner::before, .hamburger-inner::after {
-    content: "";
-    display: block;
-  }
-
-  .hamburger-inner::before {
-    top: -10px;
-  }
-
-  .hamburger-inner::after {
-    bottom: -10px;
-  }
-
-  .hamburger--slider .hamburger-inner {
-    top: 2px;
-  }
-
-  .hamburger--slider .hamburger-inner::before {
-    top: 10px;
-    transition-property: transform, opacity;
-    transition-timing-function: ease;
-    transition-duration: 0.15s;
-  }
-
-  .hamburger--slider .hamburger-inner::after {
-    top: 20px;
-  }
-
-  .hamburger--slider.is-active .hamburger-inner {
-    transform: translate3d(0, 10px, 0) rotate(45deg);
-  }
-
-  .hamburger--slider.is-active .hamburger-inner::before {
-    transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
-    opacity: 0;
-  }
-
-  .hamburger--slider.is-active .hamburger-inner::after {
-    transform: translate3d(0, -20px, 0) rotate(-90deg);
-  }
 }
 
 @media all and (min-width: 412px) and (max-width: 688px) {
@@ -346,6 +328,7 @@
     font-family: 'Space Mono', monospace;
     font-size: 20px;
     color: #222;
+    z-index: 12;
   }
 
   .about {
@@ -498,106 +481,131 @@
     padding: 40px 40px;
   }
 
-  /*!
-   * Hamburgers
-   * @description Tasty CSS-animated hamburgers
-   * @author Jonathan Suh @jonsuh
-   * @site https://jonsuh.com/hamburgers
-   * @link https://github.com/jonsuh/hamburgers
-   */
-  .hamburger {
-    padding: 0px;
-    display: inline-block;
-    cursor: pointer;
-    transition-property: opacity, filter;
-    transition-duration: 0.15s;
-    transition-timing-function: linear;
-    font: inherit;
-    color: inherit;
-    text-transform: none;
-    background-color: transparent;
-    border: 0;
-    margin: 0;
-    overflow: visible;
+  body {
+    font-family: 'Oswald', sans-serif;
+    overflow-x: hidden;
+    /* needed because hiding the menu on the right side is not perfect,  */
   }
 
-  .hamburger:hover {
-    opacity: 0.7;
+  a {
+    text-decoration: none;
+    color: #222;
+    transition: color 0.3s ease;
   }
 
-  .hamburger.is-active:hover {
-    opacity: 0.7;
+  a:hover {
+    color: tomato;
   }
 
-  .hamburger.is-active .hamburger-inner,
-  .hamburger.is-active .hamburger-inner::before,
-  .hamburger.is-active .hamburger-inner::after {
-    background-color: #222
-  }
-
-  .hamburger-box {
-    width: 40px;
-    height: 24px;
-    display: inline-block;
-    position: relative;
-  }
-
-  .hamburger-inner {
+  #menuToggle {
     display: block;
-    top: 50%;
-    margin-top: -2px;
-  }
-
-  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-    width: 40px;
-    height: 4px;
-    background-color: #222;
-    border-radius: 4px;
     position: absolute;
-    transition-property: transform;
-    transition-duration: 0.15s;
-    transition-timing-function: ease;
+    top: 50px;
+    right: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
   }
 
-  .hamburger-inner::before, .hamburger-inner::after {
-    content: "";
+  #menuToggle input {
     display: block;
-  }
-
-  .hamburger-inner::before {
-    top: -10px;
-  }
-
-  .hamburger-inner::after {
-    bottom: -10px;
-  }
-
-  .hamburger--slider .hamburger-inner {
-    top: 2px;
-  }
-
-  .hamburger--slider .hamburger-inner::before {
-    top: 10px;
-    transition-property: transform, opacity;
-    transition-timing-function: ease;
-    transition-duration: 0.15s;
-  }
-
-  .hamburger--slider .hamburger-inner::after {
-    top: 20px;
-  }
-
-  .hamburger--slider.is-active .hamburger-inner {
-    transform: translate3d(0, 10px, 0) rotate(45deg);
-  }
-
-  .hamburger--slider.is-active .hamburger-inner::before {
-    transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
     opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+    -webkit-touch-callout: none;
   }
 
-  .hamburger--slider.is-active .hamburger-inner::after {
-    transform: translate3d(0, -20px, 0) rotate(-90deg);
+  /*
+ * Just a quick hamburger
+ */
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #222;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  /*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+  #menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #222;
+  }
+
+  /*
+ * But let's hide the middle one.
+ */
+  #menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  /*
+ * Ohyeah and the last one should go the other direction
+ */
+  #menuToggle input:checked~span:nth-last-child(2) {
+    opacity: 1;
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  /*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+  #menu {
+    position: absolute;
+    width: 600px;
+    margin: -100px 0 0 0;
+    padding: 50px;
+    padding-top: 125px;
+    right: -100px;
+    background-color: #ffa695;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translate(100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  }
+
+  #menu li {
+    padding: 10px 60px;
+    text-align: right;
+    font-size: 22px;
+  }
+
+  /*
+ * And let's fade it in from the left
+ */
+  #menuToggle input:checked~ul {
+    transform: scale(1.0, 1.0);
+    opacity: 1;
   }
 }
 
@@ -785,25 +793,130 @@
     padding: 40px 40px;
   }
 
-  /*!
-   * Hamburgers
-   * @description Tasty CSS-animated hamburgers
-   * @author Jonathan Suh @jonsuh
-   * @site https://jonsuh.com/hamburgers
-   * @link https://github.com/jonsuh/hamburgers
-   */
-  .hamburger {
-    padding: 0px;
-    display: inline-block;
-    cursor: pointer;
-    transition-property: opacity, filter;
-    transition-duration: 0.15s;
-    transition-timing-function: linear;
-    font: inherit;
-    color: inherit;
-    text-transform: none;
-    background-color: transparent;
-    border: 0;
-    margin: 0;
-    overflow: visible;
+  body {
+    font-family: 'Oswald', sans-serif;
+    overflow-x: hidden;
+    /* needed because hiding the menu on the right side is not perfect,  */
   }
+
+  a {
+    text-decoration: none;
+    color: #222;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: tomato;
+  }
+
+  #menuToggle {
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
+
+  /*
+ * Just a quick hamburger
+ */
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #222;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  /*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+  #menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #222;
+  }
+
+  /*
+ * But let's hide the middle one.
+ */
+  #menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  /*
+ * Ohyeah and the last one should go the other direction
+ */
+  #menuToggle input:checked~span:nth-last-child(2) {
+    opacity: 1;
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  /*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+  #menu {
+    position: absolute;
+    width: 600px;
+    margin: -100px 0 0 0;
+    padding: 50px;
+    padding-top: 125px;
+    right: -100px;
+    background-color: #ffa695;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translate(100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  }
+
+  #menu li {
+    padding: 10px 60px;
+    text-align: right;
+    font-size: 22px;
+  }
+
+  /*
+ * And let's fade it in from the left
+ */
+  #menuToggle input:checked~ul {
+    transform: scale(1.0, 1.0);
+    opacity: 1;
+  }
+}
