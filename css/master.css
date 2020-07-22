@@ -16,6 +16,10 @@
     text-align: right;
   }
 
+  nav li {
+    display: inline-block;
+  }
+
   nav a {
     font-family: 'Oswald', sans-serif;
     font-weight: 500;
@@ -26,7 +30,6 @@
     font-size: 16px;
     letter-spacing: 1px;
     position: relative;
-    display: inline-block;
   }
 
   nav a:before {
