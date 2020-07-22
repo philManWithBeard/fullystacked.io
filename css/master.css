@@ -391,8 +391,6 @@
     font-size: 15px;
     padding-bottom: 10px;
     font-family: 'Open-Sans', sans-serif;
-    list-style-type: circle;
-    list-style-position: inside;
     line-height: 1.4;
   }
 
@@ -694,8 +692,6 @@
     font-size: 20px;
     padding-bottom: 10px;
     font-family: 'Open-Sans', sans-serif;
-    list-style-type: circle;
-    list-style-position: inside;
     line-height: 1.6;
   }
 
