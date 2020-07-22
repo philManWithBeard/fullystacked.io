@@ -25,7 +25,6 @@
     font-weight: 500;
     text-transform: uppercase;
     text-decoration: none;
-    color: #16151b;
     margin: 0 15px;
     font-size: 16px;
     letter-spacing: 1px;
@@ -95,7 +94,6 @@
 
   header {
     width: 100%;
-    background-color: #e7e7e7;
   }
 
   .headerBox {
@@ -123,12 +121,10 @@
   header h1 {
     font-family: 'Space Mono', monospace;
     font-size: 20px;
-    color: #222;
   }
 
   .about {
     box-sizing: border-box;
-    background-color: #ffe8b3;
     width: 100%;
     padding: 0px 40px;
     text-align: left;
@@ -141,7 +137,6 @@
   .about h2 {
     padding: 120px 0px 120px 0px;
     margin: 0px;
-    color: #222;
     font-size: 50px;
     font-family: 'Goudy Bookletter 1911', serif;
   }
@@ -155,7 +150,6 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    background-color: #73a9ba;
     width: 100%;
     padding: 80px 40px 80px 40px;
   }
@@ -169,14 +163,12 @@
   .skills h2, .contact h2 {
     display: block;
     padding-bottom: 20px;
-    color: #222;
     font-size: 40px;
     font-family: 'Goudy Bookletter 1911', serif;
   }
 
   .skills h3, .projects h3 {
     display: block;
-    color: #222;
     font-size: 30px;
     padding-bottom: 10px;
     font-family: 'Goudy Bookletter 1911', serif;
@@ -190,7 +182,6 @@
   }
 
   .techIcon {
-    color: #4b4b4b;
     height: 1.3em;
   }
 
@@ -199,15 +190,12 @@
   }
 
   a.projectButton {
-    color: #494949 !important;
     text-transform: uppercase;
     text-decoration: none;
-    background: #ffffff;
     display: block;
   }
 
   a.projectButton:hover {
-    color: #06d6a0;
   }
 
   .burger {
@@ -252,7 +240,6 @@
 
   .projects {
     box-sizing: border-box;
-    background-color: #fff;
     width: 100%;
     padding: 40px 40px;
     align-items: center;
@@ -264,7 +251,6 @@
     width: 600px;
     display: block;
     padding: 50px 0px;
-    color: #222;
     font-size: 40px;
     font-family: 'Goudy Bookletter 1911', serif;
   }
@@ -287,7 +273,6 @@
 
   .contact {
     box-sizing: border-box;
-    background-color: #90d6c3;
     background-size: cover;
     padding: 40px 40px;
   }
@@ -313,7 +298,6 @@
     min-width: 400px;
     padding: 30px 40px;
     height: 15vh;
-    background-color: #e7e7e7;
   }
 
   .logoTitle {
@@ -329,13 +313,11 @@
   header h1 {
     font-family: 'Space Mono', monospace;
     font-size: 20px;
-    color: #222;
     z-index: 12;
   }
 
   .about {
     box-sizing: border-box;
-    background-color: #ffe8b3;
     width: 100%;
     padding: 0px 40px;
     text-align: left;
@@ -348,7 +330,6 @@
   .about h2 {
     padding: 80px 0px 80px 0px;
     margin: 0px;
-    color: #222;
     font-size: 40px;
     font-family: 'Goudy Bookletter 1911', serif;
   }
@@ -362,7 +343,6 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    background-color: #73a9ba;
     width: 100%;
     padding: 40px 40px 80px 40px;
   }
@@ -375,14 +355,12 @@
   .skills h2, .projects h2, .contact h2 {
     display: block;
     padding-bottom: 20px;
-    color: #222;
     font-size: 32px;
     font-family: 'Goudy Bookletter 1911', serif;
   }
 
   .skills h3, .projects h3 {
     display: block;
-    color: #222;
     font-size: 25px;
     padding-bottom: 10px;
     font-family: 'Goudy Bookletter 1911', serif;
@@ -405,15 +383,12 @@
   }
 
   a.projectButton {
-    color: #494949 !important;
     text-transform: uppercase;
     text-decoration: none;
-    background: #ffffff;
     display: block;
   }
 
   a.projectButton:hover {
-    color: #06d6a0;
   }
 
   #burger1 {
@@ -454,7 +429,6 @@
 
   .projects {
     box-sizing: border-box;
-    background-color: #fff;
     width: 100%;
     padding: 40px 40px;
   }
@@ -476,7 +450,6 @@
 
   .contact {
     box-sizing: border-box;
-    background-color: #90d6c3;
     width: 100%;
     padding: 40px 40px;
   }
@@ -489,12 +462,10 @@
 
   a {
     text-decoration: none;
-    color: #222;
     transition: color 0.3s ease;
   }
 
   a:hover {
-    color: tomato;
   }
 
   #menuToggle {
@@ -585,7 +556,6 @@
     padding: 50px;
     padding-top: 125px;
     right: -100px;
-    background-color: #ffa695;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
@@ -623,7 +593,6 @@
     min-width: 300px;
     padding: 30px 40px;
     height: 15vh;
-    background-color: #e7e7e7;
   }
 
   .logoTitle {
@@ -639,12 +608,10 @@
   header h1 {
     font-family: 'Space Mono', monospace;
     font-size: 15px;
-    color: #222;
   }
 
   section.about {
     box-sizing: border-box;
-    background-color: #ffe8b3;
     width: 100%;
     padding: 0px 40px;
     text-align: left;
@@ -657,7 +624,6 @@
   section.about h2 {
     padding: 80px 0px 80px 0px;
     margin: 0px;
-    color: #222;
     font-size: 30px;
     font-family: 'Goudy Bookletter 1911', serif;
   }
@@ -668,7 +634,6 @@
 
   section.skills {
     box-sizing: border-box;
-    background-color: #73a9ba;
     width: 100%;
     padding: 40px 40px 80px 40px;
   }
@@ -676,14 +641,12 @@
   .skills h2, .projects h2, .contact h2 {
     display: block;
     padding-bottom: 20px;
-    color: #222;
     font-size: 32px;
     font-family: 'Goudy Bookletter 1911', serif;
   }
 
   .skills h3, .projects h3 {
     display: block;
-    color: #222;
     font-size: 25px;
     padding-bottom: 10px;
     font-family: 'Goudy Bookletter 1911', serif;
@@ -697,7 +660,6 @@
   }
 
   .techIcon {
-    color: #4b4b4b;
     height: 1.3em;
   }
 
@@ -706,15 +668,12 @@
   }
 
   a.projectButton {
-    color: #494949 !important;
     text-transform: uppercase;
     text-decoration: none;
-    background: #ffffff;
     display: block;
   }
 
   a.projectButton:hover {
-    color: #06d6a0;
   }
 
   .burger {
@@ -766,7 +725,6 @@
 
   .projects {
     box-sizing: border-box;
-    background-color: #fff;
     width: 100%;
     padding: 40px 40px;
   }
@@ -786,7 +744,6 @@
 
   .contact {
     box-sizing: border-box;
-    background-color: #90d6c3;
     width: 100%;
     padding: 40px 40px;
   }
@@ -799,12 +756,10 @@
 
   a {
     text-decoration: none;
-    color: #222;
     transition: color 0.3s ease;
   }
 
   a:hover {
-    color: tomato;
   }
 
   #menuToggle {
@@ -895,7 +850,6 @@
     padding: 50px;
     padding-top: 125px;
     right: -100px;
-    background-color: #ffa695;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
