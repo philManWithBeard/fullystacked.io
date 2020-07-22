@@ -202,7 +202,7 @@
     text-transform: uppercase;
     text-decoration: none;
     background: #ffffff;
-    display: inline-block;
+    display: block;
   }
 
   a.projectButton:hover {
@@ -408,7 +408,7 @@
     text-transform: uppercase;
     text-decoration: none;
     background: #ffffff;
-    display: inline-block;
+    display: block;
   }
 
   a.projectButton:hover {
@@ -709,7 +709,7 @@
     text-transform: uppercase;
     text-decoration: none;
     background: #ffffff;
-    display: inline-block;
+    display: block;
   }
 
   a.projectButton:hover {
